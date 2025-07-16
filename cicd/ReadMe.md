@@ -34,7 +34,8 @@ CI / CD를 위한 서버는 gitlab의 webhook을 감지, 결과물을 빌드 하
 1-2) Frontend에서 게임 화면의 경우 용량이 너무 크고, 런타임에 예상하지 못한 버그들이 많이 발생하였습니다. 따라서 해당 부분은 실제로 사람이 테스트를 하고 빌드하는 것이 낫다고 판단하여 CI/CD 과정에서 제거하고 SCP로 수동으로 배포하였습니다. 
 
 
-## Backend Pipe Line 
+## Backend Pipe Line
+Dockerfile에서 빌드된 JAR(`build/libs/*.jar`) 파일을 `facescape.jar`로 복사하여 실행합니다.
 ```
 pipeline {
     

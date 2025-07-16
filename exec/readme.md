@@ -11,7 +11,8 @@ DB: Maria DB
 1) Spring
 ```
 ./gradlew build
-docker build -t . 이미지명  
+# Dockerfile에서는 생성된 JAR을 `facescape.jar`로 복사합니다
+docker build -t . 이미지명
 docker run -itd --name $container_name --network host $repository
 ```
 
